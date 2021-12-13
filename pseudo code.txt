@@ -1,0 +1,17 @@
+open file name(PixelApple_original.png) to read file to convert png file to xpm flie
+
+convert png file to xpm file
+
+open xpm file name(PixelApple.xpm)
+
+edit colors and pixel
+
+save xpm file after edited
+
+open xpm file after edited(Manipulated_PixelApple.xpm)
+
+close PixelApple_original.png
+
+close PixelApple.xpm
+
+close Manipulated_PixelApple.xpm
