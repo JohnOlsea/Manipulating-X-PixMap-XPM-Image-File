@@ -1,17 +1,44 @@
-open file name(PixelApple_original.png) to read file to convert png file to xpm flie
+##declare the library used
 
-convert png file to xpm file
+Main function
+    //point pointer variable to the file to read and write on it
 
-open xpm file name(PixelApple.xpm)
+    while(!feof(fxpmptr)){
+        fscanf(fxpmptr,"%[^\n] ",data);
 
-edit colors and pixel
 
-save xpm file after edited
+        char* token = strtok(data, "#");
 
-open xpm file after edited(Manipulated_PixelApple.xpm)
 
-close PixelApple_original.png
+        while(token!=NULL)
+        {
 
-close PixelApple.xpm
+            if(strcmp(token,"2faf49")==0)
+            {
+                fprintf(fxpmptr2,"#%s",token);
+                fprintf(fxpmptr3,"#1f4677");
 
-close Manipulated_PixelApple.xpm
+            }
+            else if(strcmp(token,"bb1c2a")==0)
+            {
+                fprintf(fxpmptr2, "#%s", token);
+                fprintf(fxpmptr3, "#f48d79");
+            }
+            else if(strcmp(token,"9337d0")==0)
+            {
+                fprintf(fxpmptr2,"#%s",token);
+                fprintf(fxpmptr3,"#d5bbfe");
+            }
+            else{
+                fprintf(fxpmptr2,"%s",token);
+                fprintf(fxpmptr3,"%s",token);
+            }
+
+            token = strtok(NULL, "#");
+
+        }
+        fprintf(fxpmptr2,"\n");
+        fprintf(fxpmptr3,"\n");
+    }
+    //close file
+}
