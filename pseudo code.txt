@@ -1,44 +1,35 @@
-##declare the library used
+include all library needs
 
-Main function
-    //point pointer variable to the file to read and write on it
+main function
+    declare char(data)
 
-    while(!feof(fxpmptr)){
-        fscanf(fxpmptr,"%[^\n] ",data);
+    declare file pointer 
 
+    use pointer to read and write file
 
-        char* token = strtok(data, "#");
+    while condition()
+        take user input for the data
 
+        slicing the array into character using token method(if see '#')
 
-        while(token!=NULL)
-        {
+        while condition(when token != NULL)
+            if (compare token with color code is True)        //this will change the picture'color into 4 color
+                print that user input in another color 
 
-            if(strcmp(token,"2faf49")==0)
-            {
-                fprintf(fxpmptr2,"#%s",token);
-                fprintf(fxpmptr3,"#1f4677");
+            else if (compare token with another color is Ture)
+                print that user input in another color
 
-            }
-            else if(strcmp(token,"bb1c2a")==0)
-            {
-                fprintf(fxpmptr2, "#%s", token);
-                fprintf(fxpmptr3, "#f48d79");
-            }
-            else if(strcmp(token,"9337d0")==0)
-            {
-                fprintf(fxpmptr2,"#%s",token);
-                fprintf(fxpmptr3,"#d5bbfe");
-            }
-            else{
-                fprintf(fxpmptr2,"%s",token);
-                fprintf(fxpmptr3,"%s",token);
-            }
+            else if (compare token with color code is True)
+                print that user input in another color 
 
-            token = strtok(NULL, "#");
+            else(compare token with another color is Ture)
+                print that user input in another color
 
-        }
-        fprintf(fxpmptr2,"\n");
-        fprintf(fxpmptr3,"\n");
-    }
-    //close file
-}
+            slicing token again when see '#'
+
+        print newline
+        print newline
+
+    close file pointer
+
+End program
