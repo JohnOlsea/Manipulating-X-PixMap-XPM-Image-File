@@ -1,0 +1,10 @@
+! XPM2
+50 4 3 1
+a c #2faf49
+b c #bb1c2a
+d c #9337d0
+
+abaabaababaaabaabababaabdaabaababaabaaababaabaaabd
+babbabbababbbabbabababbadbbabbababbabbbababbabbbad
+abaabaababaaabaabababaabdaabaababaabaaababaabaaabd
+babbabbababbbabbabababbadbbabbababbabbbababbabbbad
