@@ -1,0 +1,18 @@
+! XPM2
+65 9 7 1
+a c #2faf49
+b c #bb1c2a
+d c #9337d0
++ c #3d3540
+$ c #e5f0f1
+z c #03aaf9
+f c #000000
+dddddddddddddddddddddddddddddddddddddddddddzzzzzzzzzzzzzzzzzzzzzz
+dbbbbbbaaaaabbbbbbbaaaaabbbbbbbaaaaabbbbbbdz$$$$$$$$$$$$$$$$$$$$z
+dbbbbbbabbbbbbbbbbbabbbbbbbbbbbabbbabbbbbbdz$++++++++++++++++++$z
+dbbbbbbabbbbbbbbbbbabbbbbbbbbbbabbbabbbbbbdz$++++++++++++++++++$z
+dbbbbbbaaaaabbbbbbbaaaaabbbbbbbaaaaabbbbbbdz$$$$$$$$$$$$$$$$$$$$z
+dbbbbbbbbbbabbbbbbbabbbbbbbbbbbabbbabbbbbbdzzzzzzzzzzzzzzzzzzzzzz
+dbbbbbbbbbbabbbbbbbabbbbbbbbbbbabbbabbbbbbdffffffffffffffffffffff
+dbbbbbbaaaaabbbbbbbaaaaabbbbbbbabbbabbbbbbdffffffffffffffffffffff
+dddddddddddddddddddddddddddddddddddddddddddffffffffffffffffffffff
