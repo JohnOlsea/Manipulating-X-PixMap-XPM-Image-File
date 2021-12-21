@@ -1,0 +1,12 @@
+! XPM2
+22 6 3 1
++ c #3d3540
+$ c #e5f0f1
+z c #03aaf9
+
+zzzzzzzzzzzzzzzzzzzzzz
+z$$$$$$$$$$$$$$$$$$$$z
+z$++++++++++++++++++$z
+z$++++++++++++++++++$z
+z$$$$$$$$$$$$$$$$$$$$z
+zzzzzzzzzzzzzzzzzzzzzz

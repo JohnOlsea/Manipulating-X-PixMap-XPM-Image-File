@@ -1,0 +1,14 @@
+! XPM2
+43 9 3 1
+a c #2faf49
+b c #bb1c2a
+d c #9337d0
+ddddddddddddddddddddddddddddddddddddddddddd
+dbbbbbbaaaaabbbbbbbaaaaabbbbbbbaaaaabbbbbbd
+dbbbbbbabbbbbbbbbbbabbbbbbbbbbbabbbabbbbbbd
+dbbbbbbabbbbbbbbbbbabbbbbbbbbbbabbbabbbbbbd
+dbbbbbbaaaaabbbbbbbaaaaabbbbbbbaaaaabbbbbbd
+dbbbbbbbbbbabbbbbbbabbbbbbbbbbbabbbabbbbbbd
+dbbbbbbbbbbabbbbbbbabbbbbbbbbbbabbbabbbbbbd
+dbbbbbbaaaaabbbbbbbaaaaabbbbbbbabbbabbbbbbd
+ddddddddddddddddddddddddddddddddddddddddddd
