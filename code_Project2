@@ -1,0 +1,67 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+
+
+    char data[100];
+
+    //file pointer variable
+    FILE *fxpmptr;
+    FILE *fxpmptr2;
+
+    fxpmptr = fopen("C:\\Users\\user\\Desktop\\out.txt", "r");
+    fxpmptr2 = fopen("C:\\Users\\user\\Desktop\\out.xpm", "w");
+
+    while (!feof(fxpmptr)) {
+        fscanf(fxpmptr, "%[^\n] ", data);
+        char *token = strtok(data, "#");
+
+        while (token != NULL) {
+
+            if (strcmp(token, "2faf49") == 0)
+            {
+                fprintf(fxpmptr2, "#%s", token);
+
+            }
+            else if (strcmp(token, "bb1c2a") == 0)
+            {
+                fprintf(fxpmptr2, "#%s", token);
+
+            }
+            else if (strcmp(token, "9337d0") == 0) {
+                fprintf(fxpmptr2, "#%s", token);
+            }
+            else if (strcmp(token, "3d3540") == 0){
+
+                fprintf(fxpmptr2, "#%s", token);
+
+            }
+            else if (strcmp(token, "e5f0f1") == 0)
+            {
+                fprintf(fxpmptr2, "#%s", token);
+
+            }
+            else if (strcmp(token, "03aaf9") == 0)
+            {
+                fprintf(fxpmptr2, "#%s", token);
+
+            }
+
+            else
+            {
+                fprintf(fxpmptr2, "%s", token);
+
+            }
+
+            token = strtok(NULL, "#");
+
+        }
+        fprintf(fxpmptr2, "\n");
+
+
+    }
+    fclose(fxpmptr);
+    fclose(fxpmptr2);
+    return 0;
+}
