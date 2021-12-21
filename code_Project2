@@ -47,7 +47,11 @@ int main() {
                 fprintf(fxpmptr2, "#%s", token);
 
             }
+            else if (strcmp(token, "000000") == 0)
+            {
+                fprintf(fxpmptr2, "#%s", token);
 
+            }
             else
             {
                 fprintf(fxpmptr2, "%s", token);
