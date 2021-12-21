@@ -1,0 +1,102 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+
+    char data[100];
+    char data2[100];
+
+
+    //file pointer variable
+    FILE *fxpmptr;
+    FILE *fxpmptr2;
+    FILE *fxpmptr3;
+    FILE *fxpmptr4;
+    FILE *fxpmptr5;
+
+    //point pointer variable to file
+    fxpmptr = fopen("C:\\Users\\user\\Desktop\\beforetest.txt", "r");
+    fxpmptr2 = fopen("C:\\Users\\user\\Desktop\\beforetest.xpm", "w");
+    fxpmptr3 = fopen("C:\\Users\\user\\Desktop\\aftertest.xpm", "w");
+    fxpmptr4 = fopen("C:\\Users\\user\\Desktop\\xpm2.txt", "r");
+    fxpmptr5 = fopen("C:\\Users\\user\\Desktop\\xpm2.xpm", "w");
+
+
+
+    while (!feof(fxpmptr)) {
+        fscanf(fxpmptr, "%[^\n] ", data);
+        char *token = strtok(data, "#");
+
+
+
+        while (token != NULL) {
+
+            if (strcmp(token, "2faf49") == 0) {
+                fprintf(fxpmptr2, "#%s", token);
+                fprintf(fxpmptr3, "#1f4677");
+
+
+            } else if (strcmp(token, "bb1c2a") == 0) {
+                fprintf(fxpmptr2, "#%s", token);
+                fprintf(fxpmptr3, "#f48d79");
+
+            } else if (strcmp(token, "9337d0") == 0) {
+                fprintf(fxpmptr2, "#%s", token);
+                fprintf(fxpmptr3, "#d5bbfe");
+
+            } else {
+                fprintf(fxpmptr2, "%s", token);
+                fprintf(fxpmptr3, "%s", token);
+
+
+                }
+
+            token = strtok(NULL, "#");
+
+            }
+        fprintf(fxpmptr2, "\n");
+        fprintf(fxpmptr3, "\n");
+
+        }
+    while (!feof(fxpmptr4))
+    {
+        fscanf(fxpmptr4, "%[^\n] ", data2);
+        char *token2 = strtok(data2, "#");
+        while (token2 != NULL)
+        {
+            if (strcmp(token2, "3d3540") == 0)
+            {
+                fprintf(fxpmptr5, "#%s", token2);
+
+            }
+            else if (strcmp(token2, "e5f0f1") == 0)
+            {
+                fprintf(fxpmptr5, "#%s", token2);
+
+            }
+            else if (strcmp(token2, "03aaf9") == 0)
+            {
+                fprintf(fxpmptr5, "#%s", token2);
+
+            }
+            else
+            {
+                fprintf(fxpmptr5, "%s", token2);
+            }
+
+            token2 = strtok(NULL, "#");
+
+        }
+
+        fprintf(fxpmptr5, "\n");
+    }
+        //close file
+        fclose(fxpmptr);
+        fclose(fxpmptr2);
+        fclose(fxpmptr3);
+        fclose(fxpmptr4);
+        fclose(fxpmptr5);
+
+
+        return 0;
+    }
