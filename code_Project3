@@ -1,0 +1,84 @@
+#include <stdio.h>
+#include <string.h>
+#include <malloc.h>
+
+int main() {
+
+
+    char data[100];
+    char *ptr;
+    char *ptr2;
+
+
+    //file pointer variable
+    FILE *fxpmptr;
+    FILE *fxpmptr2;
+    FILE *output;
+
+    fxpmptr = fopen("C:\\Users\\user\\Desktop\\beforetest.txt", "r");
+    fxpmptr2 = fopen("C:\\Users\\user\\Desktop\\xpm2.txt", "r");
+
+    for(int i = 0; i <= 7 ; i++) {
+        fgets(data,10, fxpmptr);
+    }
+    ptr = (char*)malloc(1000);
+    int ptr_size = fread(ptr, 1, 1000, fxpmptr);
+    for(int i = 0; i <= 7 ; i++) {
+        fgets(data,10, fxpmptr2);
+    }
+    ptr2 = (char*)malloc(1000);
+    int ptr_size2 = fread(ptr2, 1, 1000, fxpmptr2);
+    char *ptr4;
+    ptr4 = (char*)malloc(ptr_size2);
+    for(int i = 0; i <= ptr_size2; i++){
+        if (*(ptr2 + i) == '\n'){        //get rid of newline
+            *(ptr2 + i) = 0;
+        }
+        memcpy(&ptr4[i], &ptr2[i], 1);        //copy content from ptr into ptr3
+    }
+    char *ptr3;
+    ptr3 = (char*)malloc(ptr_size);
+    for(int i = 0; i <= ptr_size; i++){
+        if (*(ptr + i) == '\n'){        //get rid of newline
+            *(ptr + i) = 0;
+        }
+        memcpy(&ptr3[i], &ptr[i], 1);        //copy content from ptr into ptr3
+    }
+    output = fopen("C:\\Users\\user\\Desktop\\out.txt", "w");
+    fprintf(output,"! XPM2\n");
+    fprintf(output,"65 6 6 1\n");
+    fprintf(output,"a c #2faf49\n");
+    fprintf(output,"b c #bb1c2a\n");
+    fprintf(output,"d c #9337d0\n");
+    fprintf(output,"+ c #3d3540\n");
+    fprintf(output,"$ c #e5f0f1\n");
+    fprintf(output,"z c #03aaf9\n");
+    fwrite(ptr3,1,43,output);
+    fwrite(ptr4+1,1,22,output);
+    fprintf(output,"\n");
+    fwrite(ptr3+44,1,43,output);
+    fwrite(ptr4+24,1,22,output);
+    fprintf(output,"\n");
+    fwrite(ptr3+88,1,43,output);
+    fwrite(ptr4+47,1,22,output);
+    fprintf(output,"\n");
+    fwrite(ptr3+132,1,43,output);
+    fwrite(ptr4+70,1,22,output);
+    fprintf(output,"\n");
+    fwrite(ptr3+176,1,43,output);
+    fwrite(ptr4+93,1,22,output);
+    fprintf(output,"\n");
+    fwrite(ptr3+220,1,43,output);
+    fwrite(ptr4+116,1,22,output);
+    fprintf(output,"\n");
+    fwrite(ptr3+264,1,43,output);
+    fprintf(output,"\n");
+    fwrite(ptr3+308,1,43,output);
+    fprintf(output,"\n");
+    fwrite(ptr3+352,1,43,output);
+    free(ptr3);
+    free(ptr4);
+    fclose(fxpmptr);
+    fclose(fxpmptr2);
+    fclose(output);
+}
